@@ -7,6 +7,25 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  face = 'assets/cara.png';
+  crown = 'assets/coroa.png';
+
+  logo = 'assets/logo.png';
+  image = this.logo;
+
+  info = 'Clique no botão para jogar!';
+
   constructor() {}
+
+  playCoin() {
+    if (Math.random() < 0.5) {
+      this.image = this.face;
+      this.info = 'Cara!';
+    }
+    else {
+      this.image = this.crown;
+      this.info = 'Coroa!'
+    }
+  }
 
 }

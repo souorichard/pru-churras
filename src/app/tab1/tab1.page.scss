@@ -1,0 +1,32 @@
+.container-coin {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 50%;
+    border-radius: 50%;
+    box-shadow: 4px 4px 15px 0px #9d9d9d;
+    -webkit-box-shadow: 4px 4px 15px 0px #9d9d9d;
+    -moz-box-shadow: 4px 4px 15px 0px #9d9d9d;
+    // border: 5px solid #1fc263;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.btn {
+  opacity: 0.5;
+  transition: ease-in-out .1s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 1;
+}
