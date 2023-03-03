@@ -26,6 +26,8 @@ export class Tab1Page {
       this.image = this.crown;
       this.info = 'Coroa!'
     }
+
+    // console.log('Foii');
   }
 
 }
