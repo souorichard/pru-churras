@@ -23,15 +23,19 @@ export class Tab2Page {
   btnAdd1() {
     this.value = this.btn1;
   }
+
   btnAdd2() {
     this.value = this.btn2;
   }
+
   btnAdd3() {
     this.value = this.btn3;
   }
+
   btnAdd4() {
     this.value = this.btn4;
   }
+
   btnAdd5() {
     this.value = this.btn5;
   }
@@ -40,8 +44,16 @@ export class Tab2Page {
     this.point += this.value;
   }
 
-  removeValue() {
+  addValue2() {
+    this.point2 += this.value;
+  }
 
+  removeValue() {
+    this.point -= this.value;
+  }
+
+  removeValue2() {
+    this.point2 -= this.value;
   }
 
   clean() {

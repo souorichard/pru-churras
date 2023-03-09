@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tab 2 </ion-title>
+    <ion-title>Marcador de Tento</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,23 +19,39 @@
     <div class="teams">
       <div class="team">
         <h2>Time 1</h2>
-        <ion-button class="btn add" (click)="addValue()">
+        <button class="btn-add" (click)="addValue()">
           <ion-icon name="add-outline"></ion-icon>
-        </ion-button>
+        </button>
         <h1>{{ point }}</h1>
-        <ion-button class="btn remove" (click)="removeValue()">
+        <button class="btn-remove" (click)="removeValue()">
           <ion-icon name="remove-outline"></ion-icon>
-        </ion-button>
+        </button>
       </div>
+      <h1>X</h1>
       <div class="team">
         <h2>Time 2</h2>
-        <ion-button class="btn add" (click)="addValue()">
+        <button class="btn-add" (click)="addValue2()">
           <ion-icon name="add-outline"></ion-icon>
-        </ion-button>
+        </button>
         <h1>{{ point2 }}</h1>
-        <ion-button class="btn add" (click)="removeValue()">
+        <button class="btn-remove" (click)="removeValue2()">
           <ion-icon name="remove-outline"></ion-icon>
-        </ion-button>
+        </button>
+      </div>
+    </div>
+    <div class="rounds">
+      <div class="header">
+        <h2>Partidas</h2>
+      </div>
+      <div class="round">
+        <div class="team">
+          <h3>Time 1</h3>
+          <span>0</span>
+        </div>
+        <div class="team">
+          <h3>Time 2</h3>
+          <span>0</span>
+        </div>
       </div>
     </div>
   </div>
