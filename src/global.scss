@@ -30,3 +30,18 @@
 * {
   font-family: 'Inter';
 }
+
+.btn {
+  opacity: 0.5;
+  transition: ease-in-out .1s;
+  cursor: pointer;
+
+  .title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.btn:hover {
+  opacity: 1;
+}

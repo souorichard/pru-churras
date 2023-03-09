@@ -1,15 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title> Tab 2 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <div class="worth">
+      <h1>Valendo: <span>{{ value }}</span></h1>
+    </div>
+    <div class="buttons">
+      <button class="btn" (click)="btnAdd1()">{{ btn1 }}</button>
+      <button class="btn" (click)="btnAdd2()">{{ btn2 }}</button>
+      <button class="btn" (click)="btnAdd3()">{{ btn3 }}</button>
+      <button class="btn" (click)="btnAdd4()">{{ btn4 }}</button>
+      <button class="btn" (click)="btnAdd5()">{{ btn5 }}</button>
+    </div>
+    <div class="teams">
+      <div class="team">
+        <h2>Time 1</h2>
+        <ion-button class="btn add" (click)="addValue()">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+        <h1>{{ point }}</h1>
+        <ion-button class="btn remove" (click)="removeValue()">
+          <ion-icon name="remove-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="team">
+        <h2>Time 2</h2>
+        <ion-button class="btn add" (click)="addValue()">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+        <h1>{{ point2 }}</h1>
+        <ion-button class="btn add" (click)="removeValue()">
+          <ion-icon name="remove-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar class="btn" (click)="clean()">
+    <ion-title class="ion-text-center title">Limpar</ion-title>
+  </ion-toolbar>
+</ion-footer>
