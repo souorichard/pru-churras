@@ -10,11 +10,11 @@
       <h1>Valendo: <span>{{ value }}</span></h1>
     </div>
     <div class="buttons">
-      <button class="btn" (click)="btnAdd1()">{{ btn1 }}</button>
-      <button class="btn" (click)="btnAdd2()">{{ btn2 }}</button>
-      <button class="btn" (click)="btnAdd3()">{{ btn3 }}</button>
-      <button class="btn" (click)="btnAdd4()">{{ btn4 }}</button>
-      <button class="btn" (click)="btnAdd5()">{{ btn5 }}</button>
+      <button class="btn" (click)="btnAdd1()">1</button>
+      <button class="btn" (click)="btnAdd2()">3</button>
+      <button class="btn" (click)="btnAdd3()">6</button>
+      <button class="btn" (click)="btnAdd4()">9</button>
+      <button class="btn" (click)="btnAdd5()">12</button>
     </div>
     <div class="teams">
       <div class="team">
@@ -27,7 +27,7 @@
           <ion-icon name="remove-outline"></ion-icon>
         </button>
       </div>
-      <h1>X</h1>
+      <ion-icon name="close-outline"></ion-icon>
       <div class="team">
         <h2>Time 2</h2>
         <button class="btn-add" (click)="addValue2()">
@@ -46,11 +46,11 @@
       <div class="round">
         <div class="team">
           <h3>Time 1</h3>
-          <span>0</span>
+          <span>{{ round }}</span>
         </div>
         <div class="team">
           <h3>Time 2</h3>
-          <span>0</span>
+          <span>{{ round2 }}</span>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar class="btn" (click)="clean()">
+  <ion-toolbar class="btn" (click)="cleanToast('bottom')">
     <ion-title class="ion-text-center title">Limpar</ion-title>
   </ion-toolbar>
 </ion-footer>

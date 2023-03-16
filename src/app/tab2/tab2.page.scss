@@ -5,6 +5,9 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
+  background: linear-gradient(#00000090, #00000090), url(../../assets/background.jpg);
+  background-position: center;
+  background-size: cover;
 
   .worth {
     width: 100%;
@@ -97,6 +100,10 @@
         margin: 0;
         margin: 15px 0 15px 0;
       }
+    }
+
+    ion-icon {
+      font-size: 54px;
     }
   }
 
