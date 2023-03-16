@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -14,7 +14,10 @@ export class Tab2Page {
   round = 0;
   round2 = 0;
 
-  constructor( private toastController: ToastController ) {}
+  constructor(
+    private toastController: ToastController,
+    private alertController: AlertController
+  ) { }
 
 
   btnAdd1() {
@@ -37,23 +40,43 @@ export class Tab2Page {
     this.value = 12;
   }
 
-  addValue() {
+  async addValue() {
     this.point += this.value;
     if (this.point >= 12) {
       this.round += 1;
       this.point = 0;
       this.point2 = 0;
+
+      let team1 = 'Time 1';
+
+      const alert = await this.alertController.create({
+        header: team1,
+        message: 'Ganhou a Partida!',
+        buttons: ['Continuar'],
+      });
+
+      await alert.present();
     }
 
     this.value = 1;
   }
 
-  addValue2() {
+  async addValue2() {
     this.point2 += this.value;
     if (this.point2 >= 12) {
       this.round2 += 1;
       this.point = 0;
       this.point2 = 0;
+
+      let team2 = 'Time 2';
+
+      const alert = await this.alertController.create({
+        header: team2,
+        message: 'Ganhou a Partida!',
+        buttons: ['Continuar'],
+      });
+
+      await alert.present();
     }
 
     this.value = 1;
@@ -74,6 +97,12 @@ export class Tab2Page {
   }
 
   async cleanToast(position: 'bottom') {
+    this.value = 1;
+    this.point = 0;
+    this.point2 = 0;
+    this.round = 0;
+    this.round2 = 0;
+
     const toast = await this.toastController.create({
       message: 'Cleaned',
       duration: 1500,
