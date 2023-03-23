@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  dadoStatic = 'assets/dado-parado.png';
+  dadoGif = 'assets/dado-mechendo.gif';
+
+  public input: number | undefined;
+
+  value = 0;
+
   constructor() {}
+
+  playDado() {}
 
 }
